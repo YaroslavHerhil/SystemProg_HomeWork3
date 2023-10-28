@@ -40,12 +40,15 @@
             this.buttonStop2 = new System.Windows.Forms.Button();
             this.buttonPause1 = new System.Windows.Forms.Button();
             this.buttonPause2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonStart1
             // 
             this.buttonStart1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonStart1.BackColor = System.Drawing.Color.YellowGreen;
             this.buttonStart1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
             this.buttonStart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart1.Location = new System.Drawing.Point(12, 381);
@@ -105,7 +108,6 @@
             // buttonStop1
             // 
             this.buttonStop1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonStop1.BackColor = System.Drawing.Color.LightCoral;
             this.buttonStop1.Enabled = false;
             this.buttonStop1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStop1.Location = new System.Drawing.Point(246, 381);
@@ -129,7 +131,6 @@
             // buttonStart2
             // 
             this.buttonStart2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStart2.BackColor = System.Drawing.Color.YellowGreen;
             this.buttonStart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStart2.Location = new System.Drawing.Point(362, 381);
             this.buttonStart2.Name = "buttonStart2";
@@ -142,7 +143,6 @@
             // buttonStop2
             // 
             this.buttonStop2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStop2.BackColor = System.Drawing.Color.LightCoral;
             this.buttonStop2.Enabled = false;
             this.buttonStop2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStop2.Location = new System.Drawing.Point(596, 381);
@@ -156,7 +156,6 @@
             // buttonPause1
             // 
             this.buttonPause1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPause1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonPause1.Enabled = false;
             this.buttonPause1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPause1.Location = new System.Drawing.Point(117, 381);
@@ -170,7 +169,6 @@
             // buttonPause2
             // 
             this.buttonPause2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonPause2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonPause2.Enabled = false;
             this.buttonPause2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPause2.Location = new System.Drawing.Point(467, 381);
@@ -181,11 +179,51 @@
             this.buttonPause2.UseVisualStyleBackColor = false;
             this.buttonPause2.Click += new System.EventHandler(this.buttonPause2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(369, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(188, 29);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Upper Boundary";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(369, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(188, 29);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Lower Boundary";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(584, 53);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 35);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(584, 12);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 35);
+            this.textBox4.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(707, 469);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.buttonPause2);
             this.Controls.Add(this.buttonPause1);
             this.Controls.Add(this.buttonStop2);
@@ -219,6 +257,10 @@
         private System.Windows.Forms.Button buttonStop2;
         private System.Windows.Forms.Button buttonPause1;
         private System.Windows.Forms.Button buttonPause2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

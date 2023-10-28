@@ -63,6 +63,7 @@ namespace SystemProg_HomeWork3
             BeginInvoke(new Action(() =>
             {
                 buttonStop1.Enabled = false;
+                buttonPause1.Enabled = false;
                 buttonStart1.Enabled = true;
                 primeNumberGeneratorThread.Abort();
             }));
@@ -94,6 +95,7 @@ namespace SystemProg_HomeWork3
             BeginInvoke(new Action(() =>
             {
                 buttonStop2.Enabled = false;
+                buttonPause2.Enabled = false;
                 buttonStart2.Enabled = true;
                 fibonacciNumberGeneratorThread.Abort();
             }));
@@ -125,11 +127,14 @@ namespace SystemProg_HomeWork3
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+            buttonPause1.Text = "Pause";
             buttonStop1.Enabled = false;
             buttonStart1.Enabled = true;
             buttonPause1.Enabled = false;
 
             primeNumberGeneratorThread.Abort();
+            mre1.Set();
         }
 
         private void buttonStart2_Click(object sender, EventArgs e)
@@ -143,9 +148,9 @@ namespace SystemProg_HomeWork3
 
             richTextBox2.Clear();
 
-            if (!int.TryParse(textBox1.Text, out int lowerB) || lowerB <= 0)
+            if (!int.TryParse(textBox4.Text, out int lowerB) || lowerB <= 0)
                 lowerB = 2;
-            if (!int.TryParse(textBox2.Text, out int upperB))
+            if (!int.TryParse(textBox3.Text, out int upperB))
                 upperB = -1;
 
             int[] parameters = { lowerB, upperB };
@@ -155,11 +160,13 @@ namespace SystemProg_HomeWork3
 
         private void buttonStop2_Click(object sender, EventArgs e)
         {
+            buttonPause2.Text = "Pause";
             buttonStop2.Enabled = false;
             buttonStart2.Enabled = true;
             buttonPause2.Enabled = false;
 
             fibonacciNumberGeneratorThread.Abort();
+            mre2.Set();
         }
 
         private void buttonPause1_Click(object sender, EventArgs e)
